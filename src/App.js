@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import Login from './login.js'
+import Profile from './profile.js'
+import Register from './register.js'
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+     <Router>
+     
+     
+     <Route exact path="/" component={Login}/>
+     <Route path="/profile" component={Profile}/>
+     <Route path="/register" component={Register}/>
+     
+     </Router>
     );
   }
 }

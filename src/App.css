@@ -1,33 +1,214 @@
-.App {
-  text-align: center;
+body{
+  background: url(./back4.png);
+}
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+.blueText{
+  color:blue;
+}
+/* Login page */
+.loginMain{
+  position: relative;
+  width: 250px;
+  height: 350px;
+  top: 100px;
+  left: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background-color: white;
+  transform: translate(-50%, 0%);
+  border: 5px solid #4747ff;
+  border-radius: 10px;
+
+}
+.mainInput{
+  width: 235px;
+  height: 25px;
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
+.mainBtn{
+  margin-top: 10px;
+  height: 30px;
+  color: white;
+  background-color: #4747ff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.mainBtn:hover{
+  background-color: #000097;
+}
+.loginErrorMess{
+  position: absolute;
+  bottom: 95px;
+  left: 50px;
+  font-size: 14px;
+  color: red;
+}
+/* End Login */
+
+/* Profile page */
+
+
+.rederTable{
+  position: relative;
+  top: 30px;
+  left: 50%;
+  min-width: 500px;
+  margin: 8px;
+  border-collapse: collapse;
+  transform: translate(-50%, 0%);
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+.rederTable th, td{
+  text-align: left;
+  padding: 5px;
+  
+}
+.rederTable td{
+  cursor: pointer;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.rederTable tr:nth-child(even){
+  background-color: #f0f0f0;
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.rederTable th {
+  background-color: #4747ff;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.profileBtn{
+  position: relative;
+  top: -5px;
+  margin-top: 10px;
+  height: 30px;
+  color: white;
+  background-color: #4747ff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
 }
+.profileBtn:hover{
+  background-color: #000097;
+}
+.todoText{
+  font-family: 'Just Another Hand', cursive;
+  font-size: 35px;
+}
+.profileLogin{
+  position: relative;
+  top: 30px;
+  left: 50%;
+  width: 450px;
+  margin: 8px;
+  padding: 20px;
+  transform: translate(-50%, 0%);
+  background-color: white;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: 5px solid #4747ff;
+}
+.logAs{
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+.logOutBtn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  color: white;
+  background-color: #ff4747;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer; 
+}
+.logOutBtn:hover{
+  background-color: #970000;
+}
+.addTodoText{
+  position: relative;
+  top: 0px;
+  left: -10px;
+  height: 20px;
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
+.addBtn{
+  position: relative;
+  top: -1px;
+  height: 30px;
+  color: white;
+  background-color: #4747ff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer; 
+}
+.addBtn:hover{
+  background-color: #000097;
+}
+.todoErrorMess{
+  position: absolute;
+  top: 73px;
+  left: 53px;
+  font-size: 14px;
+  color: red;
+}
+/* End Profile */
+/* Register Page */
+.regMain{
+  position: relative;
+  width: 250px;
+  height: 275px;
+  top: 100px;
+  left: 50%;
+  padding: 20px;
+  background-color: white;
+  transform: translate(-50%, 0%);
+  border: 5px solid #4747ff;
+  border-radius: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.regInput{
+  width: 235px;
+  height: 25px;
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: none;
+}
+.regBtn{
+  margin-top: 10px;
+  height: 30px;
+  color: white;
+  background-color: #4747ff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.regBtn:hover{
+  background-color: #000097;
+}
+.regErrorMess{
+  position: absolute;
+  bottom: 93px;
+  left: 36px;
+  font-size: 14px;
+  color: red;
 }

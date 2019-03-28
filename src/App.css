@@ -1,6 +1,9 @@
 body{
   background: url(./back.png);
 }
+input {
+  background-color:  #e8f0fe;
+}
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 .blueText{
   color:blue;

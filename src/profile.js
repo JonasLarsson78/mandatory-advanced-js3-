@@ -16,10 +16,11 @@ class Profile extends PureComponent{
       super(props);
       this.state = {email: "", todo: [], token: token$.value, newTodo: "", todoErrorMess: ""};
     }
-  renderList =  (data) =>{
+  renderList =  (data, listPos) =>{
+    let num = listPos + 1;
       return (
       <tr key={data.id}>
-      <td className="todoText" style={{paddingLeft: "15px"}}>{data.content}</td>
+      <td className="todoText" style={{paddingLeft: "15px"}}>{num + ". " + data.content}</td>
       <td style={{width: "60px"}}><button className="profileBtn delBtn" data-id={data.id} onClick={this.deleteTodo}>Delete</button></td>
       </tr>
       
@@ -144,7 +145,7 @@ class Profile extends PureComponent{
             listData = <tr><td style={{textAlign: "center"}} colSpan="2">The list is empty...</td></tr>
         }
         else{
-            listData = this.state.todo.map(this.renderList);
+            listData = this.state.todo.map(this.renderList, this.state.todo.length);
         }
       
       if (this.state.token === null){

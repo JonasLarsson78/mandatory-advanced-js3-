@@ -62,11 +62,12 @@ componentWillUnmount(){
     return (
        <>
        <Helmet>
-       <title>ToDo Login</title>
+       <title>Shopping List Login</title>
      </Helmet>
-     
+     <div className="mainBack">
      <div className="loginMain">
-     <h2 style={{textAlign:"center"}}>ToDo AvJS Lab3</h2>
+     <h2 style={{textAlign:"center"}}>Shopping List</h2>
+     <p style={{textAlign:"center"}}><b>Fill The Fridge...</b></p>
        <label><b>Email:</b> </label><br/>
        <input maxLength="50" className="mainInput" onChange={this.onChangeEmail} type="email"/><br/><br/>
        <label><b>Password:</b> </label><br/>
@@ -77,6 +78,7 @@ componentWillUnmount(){
        <label><b>Register new user:</b> </label><br/>
        <Link to="/register"><button className="mainBtn">Register</button></Link>
       </div> 
+      </div>
        </>
     );
   }

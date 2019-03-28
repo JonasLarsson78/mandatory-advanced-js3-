@@ -2,23 +2,26 @@ body{
   background: url(./back.png);
 }
 input {
-  background-color:  #e8f0fe;
+  background-color:  #ffffff;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0px 9999px white;
 }
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
-.blueText{
-  color:blue;
+.redText{
+  color:red;
 }
 /* Login page */
 .loginMain{
   position: relative;
   width: 250px;
-  height: 350px;
+  height: 400px;
   top: 100px;
   left: 50%;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
-  background-color: white;
+  background-color: #cfcfff;
   transform: translate(-50%, 0%);
   border: 5px solid #4747ff;
   border-radius: 10px;
@@ -62,11 +65,12 @@ input {
   position: relative;
   top: 30px;
   left: 50%;
-  min-width: 500px;
+  min-width: 400px;
   margin: 8px;
   border-collapse: collapse;
-  transform: translate(-50%, 0%);
-  background-color: white;
+  transform: translate(-52.6%, 0%);
+  background-color: #cfcfff;
+
   margin-bottom: 40px;
   border-radius: 10px;
 }
@@ -79,7 +83,8 @@ input {
   cursor: pointer;
 }
 .rederTable tr:nth-child(even){
-  background-color: #f0f0f0;
+  
+  background-color: #ebebff;
   
 }
 .rederTable th {
@@ -104,16 +109,17 @@ input {
 .todoText{
   font-family: 'Just Another Hand', cursive;
   font-size: 35px;
+  letter-spacing: 3px;
 }
 .profileLogin{
   position: relative;
-  top: 30px;
+  top: 60px;
   left: 50%;
-  width: 450px;
+  width: 350px;
   margin: 8px;
   padding: 20px;
-  transform: translate(-50%, 0%);
-  background-color: white;
+  transform: translate(-52.6%, 0%);
+  background-color: #cfcfff;
   margin-bottom: 40px;
   border-radius: 10px;
   border: 5px solid #4747ff;
@@ -179,7 +185,7 @@ input {
   top: 100px;
   left: 50%;
   padding: 20px;
-  background-color: white;
+  background-color: #cfcfff;
   transform: translate(-50%, 0%);
   border: 5px solid #4747ff;
   border-radius: 10px;
@@ -210,7 +216,7 @@ input {
 .regErrorMess{
   position: absolute;
   bottom: 93px;
-  left: 36px;
+  left: 60px;
   font-size: 14px;
   color: red;
 }
@@ -220,4 +226,39 @@ input {
 }
 .delBtn:hover{
 background-color: #970000;
+}
+.mainBack{
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: 800px;
+  background-image: url(./kyl_front.png);
+}
+
+.profileBack{
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: 800px;
+  background-image: url(./kyl_open.png);
+}
+.pickedBtn{
+  position: relative;
+  top: -6px;
+  left: 0px;;
+  height: 31px;
+  color: white;
+  margin-right: 20px;
+  background-color: #03a511;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+.pickedBtn:hover{
+  background-color: #02660a;
 }

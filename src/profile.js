@@ -23,9 +23,9 @@ class Profile extends PureComponent{
       <td className="todoText" style={{paddingLeft: "15px"}}>{num + ". " + data.content}</td>
       <td style={{width: "60px"}}><button className="profileBtn delBtn" data-id={data.id} onClick={this.deleteTodo}>Delete</button></td>
       </tr>
-      
       )
      }  
+    
   deleteTodo = (e) =>{
     const data = this.state.todo;
     const id = e.target.dataset.id;
@@ -154,12 +154,13 @@ class Profile extends PureComponent{
       return(
         <> 
         <Helmet>
-         <title>ToDo Profile: {this.state.email}</title>
+         <title>Shopping List Profile: {this.state.email}</title>
        </Helmet>
+       <div className="profileBack">
        <div className="profileLogin">
-         <div className="logAs"><b>Logged in as:</b> <span className="blueText">{this.state.email}</span></div>
+         <div className="logAs"><b>Logged in as:</b> <span className="redText">{this.state.email}</span></div>
          <button className="logOutBtn" onClick={this.logOut}>Logout</button> <br/>
-         <input maxLength="75" placeholder="Add Todo Text" className="addTodoText" onChange={this.todoText} ref="todoText" type="text"/>
+         <input maxLength="20" placeholder="Fill The Fridge..." className="addTodoText" onChange={this.todoText} ref="todoText" type="text"/>
         <button className="addBtn" onClick={this.addTodo}>Add to list</button>
         <div className="todoErrorMess">{this.state.todoErrorMess}</div> 
        </div>
@@ -167,7 +168,7 @@ class Profile extends PureComponent{
         <table className="rederTable" border="0">
             <thead>
                 <tr>
-                  <th style={{paddingLeft: "15px", borderRadius: '10px 0 0 0',}}>ToDo List:</th>
+                  <th style={{paddingLeft: "15px", borderRadius: '10px 0 0 0',}}>Shopping List:</th>
                   <th style={{borderRadius: '0 10px 0 0',}}>Delete:</th>  
                 </tr>
             </thead>
@@ -180,7 +181,7 @@ class Profile extends PureComponent{
                 </tr>
             </tfoot>
         </table>
-    
+        </div>
         </>
       )
     }

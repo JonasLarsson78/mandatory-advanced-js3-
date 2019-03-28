@@ -32,7 +32,7 @@ class Register extends PureComponent{
   })
   .catch(error =>{
       if (error.response && error.response.status === 400){
-        this.setState({regErrorMess: "E-mail already exists! or Field empty!"})
+        this.setState({regErrorMess: "Mail or Password incorrect !"})
       }
   })
     }
@@ -46,6 +46,7 @@ class Register extends PureComponent{
         <Helmet>
           <title>ToDo Register</title>
         </Helmet>
+        <div className="mainBack">
         <div className="regMain">
         <label><b>Email:</b> </label>
         <input maxLength="50" placeholder="Type in E-mail" className="regInput" onChange={this.onChangeEmail} type="email"/><br/><br/>
@@ -56,6 +57,7 @@ class Register extends PureComponent{
         <hr/>
         <label><b>Back to Login:</b> </label><br/>
         <Link to="/"><button className="regBtn">Login</button></Link>
+        </div>
         </div>
         </>
       );

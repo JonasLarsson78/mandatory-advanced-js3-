@@ -20,7 +20,7 @@ class Profile extends PureComponent{
       return (
       <tr key={data.id}>
       <td className="todoText" style={{paddingLeft: "15px"}}>{data.content}</td>
-      <td style={{width: "60px"}}><button className="profileBtn" data-id={data.id} onClick={this.deleteTodo}>Delete</button></td>
+      <td style={{width: "60px"}}><button className="profileBtn delBtn" data-id={data.id} onClick={this.deleteTodo}>Delete</button></td>
       </tr>
       
       )
@@ -85,7 +85,6 @@ class Profile extends PureComponent{
       })
   }
   componentWillUnmount(){
-    console.log(this.subscription);
     this.subscription.unsubscribe();
     if (this.source){
       this.source.cancel();
@@ -140,14 +139,21 @@ class Profile extends PureComponent{
   }
   
     render(){
-      const listData = this.state.todo.map(this.renderList);
+        let listData;
+        if(this.state.todo.length < 1){
+            listData = <tr><td style={{textAlign: "center"}} colSpan="2">The list is empty...</td></tr>
+        }
+        else{
+            listData = this.state.todo.map(this.renderList);
+        }
+      
       if (this.state.token === null){
         return <Redirect to="/"/>
       }
       return(
         <> 
         <Helmet>
-         <title>ToDo</title>
+         <title>ToDo Profile: {this.state.email}</title>
        </Helmet>
        <div className="profileLogin">
          <div className="logAs"><b>Logged in as:</b> <span className="blueText">{this.state.email}</span></div>

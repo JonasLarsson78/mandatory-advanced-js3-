@@ -11,5 +11,5 @@ export function updateToken(newToken) {
         window.localStorage.setItem("token", newToken);
     }
     token$.next(newToken);
-    console.log(token$)
+    //console.log(token$)
 }

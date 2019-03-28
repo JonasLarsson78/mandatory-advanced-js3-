@@ -44,7 +44,7 @@ class Register extends PureComponent{
       return(
         <>
         <Helmet>
-          <title>Register</title>
+          <title>ToDo Register</title>
         </Helmet>
         <div className="regMain">
         <label><b>Email:</b> </label>

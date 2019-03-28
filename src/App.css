@@ -75,7 +75,6 @@ body{
 .rederTable td{
   cursor: pointer;
 }
-
 .rederTable tr:nth-child(even){
   background-color: #f0f0f0;
   
@@ -127,14 +126,14 @@ body{
   right: 10px;
   height: 30px;
   color: white;
-  background-color: #ff4747;
+  background-color: #4747ff;
   border: none;
   border-radius: 5px;
   outline: none;
   cursor: pointer; 
 }
 .logOutBtn:hover{
-  background-color: #970000;
+  background-color: #000097;
 }
 .addTodoText{
   position: relative;
@@ -211,4 +210,11 @@ body{
   left: 36px;
   font-size: 14px;
   color: red;
+}
+/* end reg page */
+.delBtn{
+  background-color: #ff4747
+}
+.delBtn:hover{
+background-color: #970000;
 }

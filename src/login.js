@@ -30,7 +30,6 @@ getData = () =>{
 axios.post(API_ROOT + "/auth", newData, {  headers: {  cancelToken: this.source.token,  },
 })
  .then(response => {
-   console.log(response)
    if (response.status === 200){
     const token = response.data.token;
     updateToken(token);
@@ -53,8 +52,6 @@ componentWillUnmount(){
     this.source.cancel();
   }
 }
-
-
   render() {
     
     if (this.state.isLoggdIn === true){

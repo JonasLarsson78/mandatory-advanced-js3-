@@ -16,8 +16,8 @@ class Profile extends PureComponent{
       super(props);
       this.state = {email: "", todo: [], token: token$.value, newTodo: "", todoErrorMess: ""};
     }
-  renderList =  (data, listPos) =>{
-    let num = listPos + 1;
+  renderList =  (data, index) =>{
+    let num = index + 1;
     
       return (
       <tr key={data.id}>
@@ -61,8 +61,6 @@ class Profile extends PureComponent{
   
     const decoded = jwt.decode(this.state.token);
     this.setState({email: decoded.email});
-  
-    
   
     axios.get(API_ROOT + "/todos", 
      {  headers: {  Authorization: "Bearer " + token$.value,  },
@@ -147,7 +145,8 @@ class Profile extends PureComponent{
             listData = <tr><td style={{textAlign: "center"}} colSpan="2">The list is empty...</td></tr>
         }
         else{
-            listData = this.state.todo.map(this.renderList, this.state.todo.length).reverse();
+            let newArr = [...this.state.todo]
+            listData = newArr.reverse().map(this.renderList);
         }
       
       if (this.state.token === null){

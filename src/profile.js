@@ -18,6 +18,7 @@ class Profile extends PureComponent{
     }
   renderList =  (data, listPos) =>{
     let num = listPos + 1;
+    
       return (
       <tr key={data.id}>
       <td className="todoText" style={{paddingLeft: "15px"}}>{num + ". " + data.content}</td>
@@ -99,7 +100,8 @@ class Profile extends PureComponent{
   }
   addTodo = () =>{
     
-    axios.post(API_ROOT + "/todos", { content: this.state.newTodo },{  headers: {  Authorization: "Bearer " + token$.value,  },cancelToken: this.source.token,} )
+    axios.post(API_ROOT + "/todos", { content: this.state.newTodo },
+    {  headers: {  Authorization: "Bearer " + token$.value,  },cancelToken: this.source.token,} )
     .then(response =>{
    if (response.status === 201){
     this.setState({newTodo: ""})   
@@ -145,7 +147,7 @@ class Profile extends PureComponent{
             listData = <tr><td style={{textAlign: "center"}} colSpan="2">The list is empty...</td></tr>
         }
         else{
-            listData = this.state.todo.map(this.renderList, this.state.todo.length);
+            listData = this.state.todo.map(this.renderList, this.state.todo.length).reverse();
         }
       
       if (this.state.token === null){

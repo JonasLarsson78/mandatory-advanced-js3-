@@ -51,7 +51,7 @@ input:-webkit-autofill {
 }
 .loginErrorMess{
   position: absolute;
-  bottom: 95px;
+  bottom: 107px;
   left: 50px;
   font-size: 14px;
   color: red;

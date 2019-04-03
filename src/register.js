@@ -24,7 +24,7 @@ class Register extends PureComponent{
         email: this.state.email,
         password: this.state.password
     };
-      axios.post(API_ROOT + "/register", newData )
+      axios.post(API_ROOT + "/register", newData, )
    .then(response => {
        if (response.status === 201){
         this.setState({isReg: true});
